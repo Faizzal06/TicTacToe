@@ -20,8 +20,17 @@ body{
     border: 2px solid #000;
 }
 
+.glow{
+  background-color: rgba(0, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 0px 16px 1px rgba(0, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 16px 1px rgba(0, 255, 255, 0.8); 
+  box-shadow: 0px 0px 16px 1px rgba(0, 255, 255, 0.8);
+}
 .cell:hover{
     background-color: #ff2e63;
+    -webkit-box-shadow: 0px 0px 16px 1px #ff2e63;
+    -moz-box-shadow: 0px 0px 16px 1px #ff2e63; 
+    box-shadow: 0px 0px 16px 1px #ff2e63;
 }
 
 #cellContainer{
@@ -43,6 +52,9 @@ select{
 
 select:hover{
     padding: 5px 15px;
+    -webkit-box-shadow: 0px 0px 16px 1px #ff2e63;
+    -moz-box-shadow: 0px 0px 16px 1px #ff2e63; 
+    box-shadow: 0px 0px 16px 1px #ff2e63;
 }
 
 button{
@@ -55,6 +67,9 @@ button{
 
 button:hover{
     padding: 10px 30px;
+    -webkit-box-shadow: 0px 0px 16px 1px #ff2e63;
+    -moz-box-shadow: 0px 0px 16px 1px #ff2e63; 
+    box-shadow: 0px 0px 16px 1px #ff2e63;
 }
 
 #pop{
@@ -68,4 +83,29 @@ button:hover{
 
 #pop h2, #pop p{
     color: black;
+}
+
+.mode-container{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.button{
+  display: none;
+}
+
+.label-1, .label-2{
+  background-color: #ff2e63;
+  padding: 10px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+#option1:checked ~ .label-1,
+#option2:checked ~ .label-2{
+  background-color: rgba(0, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 0px 16px 1px rgba(0, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(0, 255, 255, 0.8); 
+    box-shadow: 0px 0px 16px 1px rgba(0, 255, 255, 0.8);
 }

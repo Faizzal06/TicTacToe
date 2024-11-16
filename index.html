@@ -4,15 +4,18 @@
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="gameContainer">
         <h1>TicTacToe</h1>
-            <select id="modeSelect">
-                <option value="pvp">Player vs Player</option>
-                <option value="pve">Player vs Bot</option>
-            </select>
+        <div class="mode-container">
+          <input type="radio" id="option1" class="button" name="option" onchange="handleChange(this);" value="pvp" />
+          <label for="option1" class="label-1"><i class="fa-solid fa-user-group"></i></label>
+          <input type="radio" id="option2" class="button" name="option" onchange="handleChange(this);" value="pve" checked=""/>
+          <label for="option2" class="label-2"><i class="fa-solid fa-user"></i></label>
+        </div>
         <div id="cellContainer">
             <div cellIndex="0" class="cell"></div>
             <div cellIndex="1" class="cell"></div>

@@ -2,7 +2,7 @@ const cells = document.querySelectorAll('.cell');
 const pop = document.getElementById('pop')
 const popText = document.getElementById('popText')
 const statusText = document.getElementById('statusText');
-const modeSelect = document.getElementById('modeSelect');
+let modeSelect = "pve"
 
 const winCondition = [
     [0, 1, 2],
@@ -16,13 +16,14 @@ const winCondition = [
 ];
 
 let options = ["", "", "", "", "", "", "", "", ""];
-let currentPlayer = "X"; // Pemain manusia
+let currentPlayer = "X";
 let running = false;
 
 initializeGame();
 
 function initializeGame() {
-    cells.forEach(cell => cell.addEventListener("click", cellClicked));
+    cells.forEach(cell => cell.addEventListener("click", cellClicked)
+    );
     statusText.innerText = `${currentPlayer}'s Turn`;
     running = true;
 }
@@ -61,7 +62,7 @@ function checkWinner() {
         }
         if (cellA == cellB && cellB == cellC) {
             for(j=0;j<3;j++){
-                cells[winCondition[i][j]].style.backgroundColor = '#08d9d6'
+                cells[winCondition[i][j]].classList.add("glow")
                 }
             roundWon = true;
             break;
@@ -80,10 +81,10 @@ function checkWinner() {
         running = false;
     } else {
         changePlayer();
-        if (currentPlayer === "O" && modeSelect.value === "pve") {
+        if (currentPlayer === "O" && modeSelect === "pve") {
             setTimeout(() => {
                 botMove();
-            }, 750);
+            }, 100);
             
         }
     }
@@ -108,6 +109,10 @@ function restartGame(){
     cells.forEach(cell => cell.innerText = "")
     running = true
     cells.forEach((cell)=>{
-        cell.style.backgroundColor = ""
+        cell.classList.remove("glow")
     })
+}
+
+function handleChange(a){
+  modeSelect = a.value
 }
