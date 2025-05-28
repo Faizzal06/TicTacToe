@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 15px 0;
+            color: #333;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .play-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #ff416c;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0 5px 10px rgba(255,65,108,0.3);
+        }
+
+        .play-button:hover {
+            background: #ff4b87;
+            box-shadow: 0 8px 15px rgba(255,65,108,0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>TicTacToe</h1>
+    <img src="https://i.imgur.com/bgkUSvC.jpeg" alt="Gambar Game">
+    <p>Bermain bersama teman atau kalahkan bot</p>
+    <h3>Cara Bermain</h3>
+    <p>Gambar <strong>X</strong> dan <strong>O</strong> untuk memenuhi kotak 3x3, Pemain yang berhasil menempatkan tiga tanda mereka di baris horisontal, vertikal, atau diagonal akan memenangkan pertandingan.</p>
+    <a href="index.html" class="play-button">Mainkan Sekarang</a>
+</div>
+ 
+</body>
+</html>
